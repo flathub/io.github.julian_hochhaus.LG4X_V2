@@ -82,7 +82,7 @@ modules:
       - type: git
         url: https://github.com/Julian-Hochhaus/LG4X-V2
         commit: 70f37b1ce388c4fcd65a02ae6302f1ae032ee760
-        tag: v2.1.0
+        tag: 2.1.5
         x-checker-data:
           type: git
           tag-pattern: ^(v[\d._]+)$
