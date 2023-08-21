@@ -86,9 +86,7 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^([\d._]+)$
-      # - type: patch
-      #   path: metainfo_release_date.patch
-      # - type: patch
-      #   path: fix_image_url.patch
+      - type: patch
+        path: metainfo_release_date.patch
 
 
