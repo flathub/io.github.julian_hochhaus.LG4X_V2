@@ -2,8 +2,8 @@ app-id: io.github.julian_hochhaus.LG4X_V2
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: '5.15-22.08'
-runtime-version: '5.15-22.08'
+base-version: 5.15-22.08
+runtime-version: 5.15-22.08
 command: main.py
 finish-args:
   - --share=ipc
@@ -22,7 +22,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/mesonbuild/meson.git
-        tag: '1.1.1'
+        tag: 1.1.1
 
   - name: openblas # dependency for lmfit
     no-autogen: true
@@ -64,8 +64,8 @@ modules:
         url: http://www.qhull.org/download/qhull-2020-src-8.0.2.tgz
         sha256: b5c2d7eb833278881b952c8a52d20179eab87766b00b865000469a45c1838b7e
       - type: archive
-        url: https://files.pythonhosted.org/packages/b7/65/d6e00376dbdb6c227d79a2d6ec32f66cfb163f0cd924090e3133a4f85a11/matplotlib-3.7.1.tar.gz
-        sha256: 7b73305f25eab4541bd7ee0b96d87e53ae9c9f1823be5659b806cd85786fe882
+        url: https://files.pythonhosted.org/packages/e5/59/b859fa2539b4121b016ea85758188203522fc12b0711de8b247cfec3cdac/matplotlib-3.7.2.tar.gz
+        sha256: a8cdb91dddb04436bd2f098b8fdf4b81352e68cf4d2c6756fcc414791076569b
         x-checker-data:
           type: pypi
           name: matplotlib
@@ -81,14 +81,14 @@ modules:
     sources:
       - type: git
         url: https://github.com/Julian-Hochhaus/LG4X-V2
-        commit: 70f37b1ce388c4fcd65a02ae6302f1ae032ee760
-        tag: v2.1.0
+        commit: 91d8dbbf43756d9fa799e6759097e1c7aeae55ec
+        tag: 2.1.5
         x-checker-data:
           type: git
-          tag-pattern: ^(v[\d._]+)$
-      - type: patch
-        path: metainfo_release_date.patch
-      - type: patch
-        path: fix_image_url.patch
+          tag-pattern: ^([\d._]+)$
+      # - type: patch
+      #   path: metainfo_release_date.patch
+      # - type: patch
+      #   path: fix_image_url.patch
 
 
