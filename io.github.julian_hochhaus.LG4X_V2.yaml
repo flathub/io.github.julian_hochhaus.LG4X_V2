@@ -123,11 +123,11 @@ modules:
         --no-build-isolation .
     sources:
       - type: archive
-        url: https://files.pythonhosted.org/packages/83/8a/75993dbf43f593bc5f4815806b9c61b25819dbced2a165c0dd11a5d70a2c/lmfit-1.2.2.tar.gz
-        sha256: 044a052a11a61da0576274504c17eb7e2803b41128e25821e96632207f23c88c
+        url: https://files.pythonhosted.org/packages/6c/88/d753e81e40dbf5c6d9154b5239f0587c37a2157c7e3966b73d934e94d5c6/lmfitxps-1.3.0.tar.gz
+        sha256: 75ea46ee85defcba219e84558e322cbe603fd9fa5571a6efc367d07cf9cd06f4
         x-checker-data:
           type: pypi
-          name: lmfit
+          name: lmfitxps
 
   - name: LG4X-V2
     buildsystem: simple
