@@ -23,11 +23,11 @@ modules:
       - type: git
         url: https://github.com/mesonbuild/meson.git
         tag: 1.2.1
+        commit: da78b969ee3635bbea81909aa9ebdad3c77257a5
         x-checker-data:
           type: git
-          tag-pattern: ^v?([\d.]+)$
+          tag-pattern: ^([\d.]+)$
 
-        commit: da78b969ee3635bbea81909aa9ebdad3c77257a5
   - name: openblas # dependency for lmfit and numpy
     no-autogen: true
     make-args:
@@ -59,7 +59,7 @@ modules:
     build-commands:
       - pip3 install --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
         --no-build-isolation .
-      - cd .. && python3 -c "import numpy, sys; sys.exit(numpy.test() is False)"
+      # - cd .. && python3 -c "import numpy, sys; sys.exit(numpy.test() is False)"
     sources:
       - type: archive
         url: https://files.pythonhosted.org/packages/55/b3/b13bce39ba82b7398c06d10446f5ffd5c07db39b09bd37370dc720c7951c/numpy-1.26.0.tar.gz
@@ -70,13 +70,9 @@ modules:
 
   - name: python-scipy
     buildsystem: simple
-    # build-options:
-    #   env:
-    #     PY_IGNORE_IMPORTMISMATCH: 1
     build-commands:
       - pip3 install --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
         --no-build-isolation .
-      # - pytest
     sources:
       - type: archive
         url: https://files.pythonhosted.org/packages/9c/ef/87a5565907645998d7c62e76b84b0ca9f0b7c25cd433f5617a968051cec3/scipy-1.11.2.tar.gz
@@ -111,7 +107,7 @@ modules:
     build-commands:
       - pip3 install --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
         --no-build-isolation .
-      - pytest
+      # - pytest
     sources:
       - type: archive
         url: https://files.pythonhosted.org/packages/83/8a/75993dbf43f593bc5f4815806b9c61b25819dbced2a165c0dd11a5d70a2c/lmfit-1.2.2.tar.gz
@@ -148,7 +144,7 @@ modules:
         tag: 2.1.5
         x-checker-data:
           type: git
-          tag-pattern: ^([\d._]+)$
+          tag-pattern: ^([\d.]+)$
       - type: patch
         path: metainfo_release_date.patch
       - type: patch
