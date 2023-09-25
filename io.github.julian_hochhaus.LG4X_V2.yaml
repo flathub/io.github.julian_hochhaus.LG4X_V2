@@ -47,11 +47,8 @@ modules:
           project-id: 2540
           url-template: https://github.com/xianyi/OpenBLAS/archive/v$version.tar.gz
 
-    # Update python modules command.
-    # https://github.com/flatpak/flatpak-builder-tools/tree/master/pip
-    # python3 flatpak-pip-generator tomli packaging pyproject_metadata exceptiongroup hypothesis pytest pybind11 setuptools_scm_git_archive setuptools_scm setuptools pythran meson-python versioneer contourpy cycler fonttools cppy kiwisolver pillow pyparsing==3.0.9 asteval uncertainties pytest-cov python-dateutil --ignore-installed numpy,scipy -o dependencies && flatpak-builder build --force-clean --install --user io.github.julian_hochhaus.LG4X_V2.yaml
-  - dependencies.json
-
+    # python3 flatpak-pip-generator tomli packaging pyproject_metadata exceptiongroup pybind11 setuptools_scm_git_archive setuptools_scm setuptools pythran meson-python --ignore-installed numpy,scipy -o numpy_deps
+  - numpy_deps.json
   - name: python-numpy
     buildsystem: simple
     build-options:
@@ -68,18 +65,10 @@ modules:
           type: pypi
           name: numpy
 
-  - name: python-scipy
-    buildsystem: simple
-    build-commands:
-      - pip3 install --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
-        --no-build-isolation .
-    sources:
-      - type: archive
-        url: https://files.pythonhosted.org/packages/9c/ef/87a5565907645998d7c62e76b84b0ca9f0b7c25cd433f5617a968051cec3/scipy-1.11.2.tar.gz
-        sha256: b29318a5e39bd200ca4381d80b065cdf3076c7d7281c5e36569e99273867f61d
-        x-checker-data:
-          type: pypi
-          name: scipy
+    # Update python modules command.
+    # https://github.com/flatpak/flatpak-builder-tools/tree/master/pip
+    # python3 flatpak-pip-generator versioneer contourpy cycler fonttools cppy kiwisolver pillow pyparsing==3.0.9 asteval uncertainties python-dateutil scipy pandas lmfit lmfitxps --ignore-installed numpy -o dependencies && flatpak-builder build --force-clean --install --user io.github.julian_hochhaus.LG4X_V2.yaml
+  - dependencies.json
 
   - name: python3-matplotlib
     buildsystem: simple
@@ -101,33 +90,6 @@ modules:
         x-checker-data:
           type: pypi
           name: matplotlib
-
-  - name: python-lmfit
-    buildsystem: simple
-    build-commands:
-      - pip3 install --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
-        --no-build-isolation .
-      # - pytest
-    sources:
-      - type: archive
-        url: https://files.pythonhosted.org/packages/83/8a/75993dbf43f593bc5f4815806b9c61b25819dbced2a165c0dd11a5d70a2c/lmfit-1.2.2.tar.gz
-        sha256: 044a052a11a61da0576274504c17eb7e2803b41128e25821e96632207f23c88c
-        x-checker-data:
-          type: pypi
-          name: lmfit
-
-  - name: python-lmfitxps
-    buildsystem: simple
-    build-commands:
-      - pip3 install --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
-        --no-build-isolation .
-    sources:
-      - type: archive
-        url: https://files.pythonhosted.org/packages/6c/88/d753e81e40dbf5c6d9154b5239f0587c37a2157c7e3966b73d934e94d5c6/lmfitxps-1.3.0.tar.gz
-        sha256: 75ea46ee85defcba219e84558e322cbe603fd9fa5571a6efc367d07cf9cd06f4
-        x-checker-data:
-          type: pypi
-          name: lmfitxps
 
   - name: LG4X-V2
     buildsystem: simple
