@@ -22,16 +22,18 @@ modules:
     sources:
       - type: git
         url: https://github.com/mesonbuild/meson.git
-        tag: 1.1.1
+        tag: 1.2.1
+        commit: da78b969ee3635bbea81909aa9ebdad3c77257a5
+        x-checker-data:
+          type: git
+          tag-pattern: ^([\d.]+)$
 
-  - name: openblas # dependency for lmfit
+  - name: openblas # dependency for lmfit and numpy
     no-autogen: true
     make-args:
       - DYNAMIC_ARCH=1
       - DYNAMIC_OLDER=1
       - FC=gfortran
-      - NO_CBLAS=1
-      - NO_LAPACKE=1
       - TARGET=GENERIC
       - USE_OPENMP=0
     make-install-args:
@@ -45,8 +47,27 @@ modules:
           project-id: 2540
           url-template: https://github.com/xianyi/OpenBLAS/archive/v$version.tar.gz
 
+    # python3 flatpak-pip-generator tomli packaging pyproject_metadata exceptiongroup pybind11 setuptools_scm_git_archive setuptools_scm setuptools pythran meson-python --ignore-installed numpy,scipy -o numpy_deps
+  - numpy_deps.json
+  - name: python-numpy
+    buildsystem: simple
+    build-options:
+      ldflags: -lgfortran
+    build-commands:
+      - pip3 install --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
+        --no-build-isolation .
+      # - cd .. && python3 -c "import numpy, sys; sys.exit(numpy.test() is False)"
+    sources:
+      - type: archive
+        url: https://files.pythonhosted.org/packages/55/b3/b13bce39ba82b7398c06d10446f5ffd5c07db39b09bd37370dc720c7951c/numpy-1.26.0.tar.gz
+        sha256: f93fc78fe8bf15afe2b8d6b6499f1c73953169fad1e9a8dd086cdff3190e7fdf
+        x-checker-data:
+          type: pypi
+          name: numpy
+
     # Update python modules command.
-    # python3 flatpak-pip-generator tomli pybind11 setuptools_scm_git_archive setuptools_scm setuptools pythran meson-python lmfit lmfitxps versioneer pandas contourpy cycler fonttools cppy kiwisolver pillow pyparsing==3.0.9 -o dependencies && flatpak-builder build --force-clean --install --user io.github.julian_hochhaus.LG4X_V2.yaml
+    # https://github.com/flatpak/flatpak-builder-tools/tree/master/pip
+    # python3 flatpak-pip-generator versioneer contourpy cycler fonttools cppy kiwisolver pillow pyparsing==3.0.9 asteval uncertainties python-dateutil scipy pandas lmfit lmfitxps --ignore-installed numpy -o dependencies && flatpak-builder build --force-clean --install --user io.github.julian_hochhaus.LG4X_V2.yaml
   - dependencies.json
 
   - name: python3-matplotlib
@@ -85,7 +106,7 @@ modules:
         tag: 2.1.5
         x-checker-data:
           type: git
-          tag-pattern: ^([\d._]+)$
+          tag-pattern: ^([\d.]+)$
       - type: patch
         path: metainfo_release_date.patch
       - type: patch
