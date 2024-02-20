@@ -33,7 +33,8 @@ modules:
           project-id: 2540
           url-template: https://github.com/xianyi/OpenBLAS/archive/v$version.tar.gz
 
-    # python3 flatpak-pip-generator tomli packaging pyproject_metadata exceptiongroup pybind11 setuptools_scm_git_archive setuptools_scm setuptools pythran meson-python --ignore-installed numpy,scipy -o numpy_deps
+    # Update with
+    # python3 flatpak-pip-generator tomli packaging pyproject_metadata exceptiongroup pybind11 setuptools_scm_git_archive setuptools_scm setuptools meson-python pythran --ignore-installed numpy,scipy -o numpy_deps
   - numpy_deps.json
   - name: python-numpy
     buildsystem: simple
@@ -42,7 +43,6 @@ modules:
     build-commands:
       - pip3 install --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
         --no-build-isolation .
-      # - cd .. && python3 -c "import numpy, sys; sys.exit(numpy.test() is False)"
     sources:
       - type: archive
         url: https://files.pythonhosted.org/packages/d0/b0/13e2b50c95bfc1d5ee04925eb5c105726c838f922d0aaddd57b7c8be0f8b/numpy-1.26.3.tar.gz
@@ -53,7 +53,7 @@ modules:
 
     # Update python modules command.
     # https://github.com/flatpak/flatpak-builder-tools/tree/master/pip
-    # python3 flatpak-pip-generator versioneer contourpy cycler fonttools cppy kiwisolver pillow pyparsing==3.0.9 asteval uncertainties python-dateutil scipy pandas lmfit lmfitxps --ignore-installed numpy -o dependencies && flatpak-builder build --force-clean --install --user io.github.julian_hochhaus.LG4X_V2.yaml
+    # python3 flatpak-pip-generator versioneer contourpy cycler fonttools cppy kiwisolver pillow pyparsing asteval uncertainties python-dateutil scipy pandas==2.1.0 lmfit lmfitxps --ignore-installed numpy -o dependencies && flatpak-builder build --force-clean --install --user io.github.julian_hochhaus.LG4X_V2.yaml
   - dependencies.json
 
   - name: python3-matplotlib
@@ -68,8 +68,8 @@ modules:
         sha256: 0a3c7dfbda6da1e8fce29232e8e96d987ababbbf71ebc8c75659e4132c367014
       - type: archive
         dest: build/qhull-2020.2
-        url: http://www.qhull.org/download/qhull-2020-src-8.0.2.tgz
-        sha256: b5c2d7eb833278881b952c8a52d20179eab87766b00b865000469a45c1838b7e
+        url: https://github.com/qhull/qhull/archive/refs/tags/2020.2.tar.gz
+        sha256: 59356b229b768e6e2b09a701448bfa222c37b797a84f87f864f97462d8dbc7c5
       - type: archive
         url: https://files.pythonhosted.org/packages/fb/ab/38a0e94cb01dacb50f06957c2bed1c83b8f9dac6618988a37b2487862944/matplotlib-3.8.2.tar.gz
         sha256: 01a978b871b881ee76017152f1f1a0cbf6bd5f7b8ff8c96df0df1bd57d8755a1
