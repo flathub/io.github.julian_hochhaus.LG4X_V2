@@ -51,12 +51,6 @@ modules:
           type: pypi
           name: numpy
 
-  - name: test
-    buildsystem: simple
-    build-commands:
-      - pip3 install --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
-        --no-build-isolation .
-
     # Update python modules command.
     # https://github.com/flatpak/flatpak-builder-tools/tree/master/pip
     # python3 flatpak-pip-generator versioneer contourpy cycler fonttools cppy kiwisolver pillow pyparsing asteval uncertainties python-dateutil scipy pandas==2.1.0 lmfit lmfitxps --ignore-installed numpy -o dependencies && flatpak-builder build --force-clean --install --user io.github.julian_hochhaus.LG4X_V2.yaml
