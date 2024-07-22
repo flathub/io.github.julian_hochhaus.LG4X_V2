@@ -33,9 +33,36 @@ modules:
           project-id: 2540
           url-template: https://github.com/xianyi/OpenBLAS/archive/v$version.tar.gz
 
-    # Update with
-    # python3 flatpak-pip-generator tomli packaging pyproject_metadata exceptiongroup pybind11 setuptools_scm_git_archive setuptools_scm setuptools meson-python pythran --ignore-installed numpy,scipy -o numpy_deps
+  - name: Cython
+    buildsystem: simple
+    build-commands:
+      - pip3 install --no-index --ignore-installed --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
+        --no-build-isolation .
+    sources:
+      - type: archive
+        url: https://files.pythonhosted.org/packages/d5/f7/2fdd9205a2eedee7d9b0abbf15944a1151eb943001dbdc5233b1d1cfc34e/Cython-3.0.10.tar.gz
+        sha256: dcc96739331fb854dcf503f94607576cfe8488066c61ca50dfd55836f132de99
+
+  - name: pybind11
+    buildsystem: cmake-ninja
+    builddir: true
+    config-opts:
+      - -DPYBIND11_INSTALL:BOOL=ON
+      - -DPYBIND11_TEST:BOOL=OFF
+      - -DPYTHON_INCLUDE_DIRS=/usr/include/python3.11
+    sources:
+      - type: git
+        url: https://github.com/pybind/pybind11
+        tag: v2.12.0
+        commit: 3e9dfa2866941655c56877882565e7577de6fc7b
+        x-checker-data:
+          type: git
+          tag-pattern: ^v?([\d.]+)$
+
+    # Update modules
+    # python3 flatpak-pip-generator tomli packaging pyproject_metadata exceptiongroup pybind11 setuptools_scm_git_archive setuptools_scm setuptools meson-python pythran --ignore-installed numpy,scipy -o numpy_deps && python3 flatpak-pip-generator versioneer contourpy cycler fonttools cppy kiwisolver pillow pyparsing asteval uncertainties python-dateutil scipy pandas lmfit lmfitxps --ignore-installed numpy -o dependencies && flatpak-builder build --force-clean --install --user io.github.julian_hochhaus.LG4X_V2.yaml
   - numpy_deps.json
+
   - name: python-numpy
     buildsystem: simple
     build-options:
@@ -51,9 +78,6 @@ modules:
         #   type: pypi
         #   name: numpy
 
-    # Update python modules command.
-    # https://github.com/flatpak/flatpak-builder-tools/tree/master/pip
-    # python3 flatpak-pip-generator versioneer contourpy cycler fonttools cppy kiwisolver pillow pyparsing asteval uncertainties python-dateutil scipy pandas==2.1.0 lmfit lmfitxps --ignore-installed numpy -o dependencies && flatpak-builder build --force-clean --install --user io.github.julian_hochhaus.LG4X_V2.yaml
   - dependencies.json
 
   - name: python3-matplotlib

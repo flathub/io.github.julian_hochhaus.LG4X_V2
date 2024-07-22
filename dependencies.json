@@ -31,8 +31,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/05/35/fb1ada118002df3fe91b5c3b28bc0d90f879b881a5d8f68b1f9b79c44bfe/numpy-2.0.0.tar.gz",
-                    "sha256": "cf5d1c9e6837f8af9f92b6bd3e86d513cdc11f60fd62185cc49ec7d1aba34864"
+                    "url": "https://files.pythonhosted.org/packages/1c/8a/0db635b225d2aa2984e405dc14bd2b0c324a0c312ea1bc9d283f2b83b038/numpy-2.0.1.tar.gz",
+                    "sha256": "485b87235796410c3519a699cfe1faab097e509e90ebb05dcd098db2ae87e7b3"
                 }
             ]
         },
@@ -129,8 +129,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e0/3e/e50e66d843eef03194cc351c7bd81b500d83e8ded73c986d9af7cb33ccae/asteval-1.0.0-py3-none-any.whl",
-                    "sha256": "71bf1ebd56da932f8d7decb3fa5cef37080b900e30be7e4647b3233033245d67"
+                    "url": "https://files.pythonhosted.org/packages/fe/f3/444d97e43a6df0c9203d7bbbe9bbbf33fae0c36e004c43487f71e2b3a596/asteval-1.0.1-py3-none-any.whl",
+                    "sha256": "c7992cc6d0487ab29700b4531d9e7870e4b2e16cf94603cd5b71b21503fb0cde"
                 }
             ]
         },
@@ -143,8 +143,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/00/86/af0ecc6ea413c6880411c8857faa12ed9be70fa38c7741280592257615da/uncertainties-3.2.1-py3-none-any.whl",
-                    "sha256": "80dea7f0c2fe37c9de6893b2352311b5f332be60060cbd6387f88050f7ec345d"
+                    "url": "https://files.pythonhosted.org/packages/fa/fc/97711d2a502881d871e3cf2d2645e21e7f8e4d4fd9a56937557790cade6a/uncertainties-3.2.2-py3-none-any.whl",
+                    "sha256": "fd8543355952f4052786ed4150acaf12e23117bd0f5bd03ea07de466bce646e7"
                 }
             ]
         },
@@ -171,8 +171,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/05/35/fb1ada118002df3fe91b5c3b28bc0d90f879b881a5d8f68b1f9b79c44bfe/numpy-2.0.0.tar.gz",
-                    "sha256": "cf5d1c9e6837f8af9f92b6bd3e86d513cdc11f60fd62185cc49ec7d1aba34864"
+                    "url": "https://files.pythonhosted.org/packages/1c/8a/0db635b225d2aa2984e405dc14bd2b0c324a0c312ea1bc9d283f2b83b038/numpy-2.0.1.tar.gz",
+                    "sha256": "485b87235796410c3519a699cfe1faab097e509e90ebb05dcd098db2ae87e7b3"
                 },
                 {
                     "type": "file",
@@ -185,18 +185,18 @@
             "name": "python3-pandas",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pandas==2.1.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pandas\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/05/35/fb1ada118002df3fe91b5c3b28bc0d90f879b881a5d8f68b1f9b79c44bfe/numpy-2.0.0.tar.gz",
-                    "sha256": "cf5d1c9e6837f8af9f92b6bd3e86d513cdc11f60fd62185cc49ec7d1aba34864"
+                    "url": "https://files.pythonhosted.org/packages/1c/8a/0db635b225d2aa2984e405dc14bd2b0c324a0c312ea1bc9d283f2b83b038/numpy-2.0.1.tar.gz",
+                    "sha256": "485b87235796410c3519a699cfe1faab097e509e90ebb05dcd098db2ae87e7b3"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6f/31/a4a8e7367856d9584d0332793edfe631182a9cca885f12dbe2dd77c10c4a/pandas-2.1.0.tar.gz",
-                    "sha256": "62c24c7fc59e42b775ce0679cfa7b14a5f9bfb7643cfbe708c960699e05fb918"
+                    "url": "https://files.pythonhosted.org/packages/88/d9/ecf715f34c73ccb1d8ceb82fc01cd1028a65a5f6dbc57bfa6ea155119058/pandas-2.2.2.tar.gz",
+                    "sha256": "9e79019aba43cb4fda9e4d983f8e88ca0373adbb697ae9c6c43093218de28b54"
                 },
                 {
                     "type": "file",
@@ -224,8 +224,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e0/3e/e50e66d843eef03194cc351c7bd81b500d83e8ded73c986d9af7cb33ccae/asteval-1.0.0-py3-none-any.whl",
-                    "sha256": "71bf1ebd56da932f8d7decb3fa5cef37080b900e30be7e4647b3233033245d67"
+                    "url": "https://files.pythonhosted.org/packages/fe/f3/444d97e43a6df0c9203d7bbbe9bbbf33fae0c36e004c43487f71e2b3a596/asteval-1.0.1-py3-none-any.whl",
+                    "sha256": "c7992cc6d0487ab29700b4531d9e7870e4b2e16cf94603cd5b71b21503fb0cde"
                 },
                 {
                     "type": "file",
@@ -234,13 +234,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/96/d7/1197e2b3e3e2ce52fda5fc2eb0463779cee7a9da1cf63854dffae5a6efff/lmfit-1.3.1-py3-none-any.whl",
-                    "sha256": "5486c19fe6b3899e4562b9976dee42d1a064a81ce76fe280a9970398fa300312"
+                    "url": "https://files.pythonhosted.org/packages/1c/3b/594a8d453a1970ca20d0a39b310882279a9396285f45f89b08e8f6b60e1f/lmfit-1.3.2-py3-none-any.whl",
+                    "sha256": "2b834f054cd7a5172f3b431345b292e5d95ea387d6f96d60ad35a11b8efee6ac"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/05/35/fb1ada118002df3fe91b5c3b28bc0d90f879b881a5d8f68b1f9b79c44bfe/numpy-2.0.0.tar.gz",
-                    "sha256": "cf5d1c9e6837f8af9f92b6bd3e86d513cdc11f60fd62185cc49ec7d1aba34864"
+                    "url": "https://files.pythonhosted.org/packages/1c/8a/0db635b225d2aa2984e405dc14bd2b0c324a0c312ea1bc9d283f2b83b038/numpy-2.0.1.tar.gz",
+                    "sha256": "485b87235796410c3519a699cfe1faab097e509e90ebb05dcd098db2ae87e7b3"
                 },
                 {
                     "type": "file",
@@ -249,8 +249,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/00/86/af0ecc6ea413c6880411c8857faa12ed9be70fa38c7741280592257615da/uncertainties-3.2.1-py3-none-any.whl",
-                    "sha256": "80dea7f0c2fe37c9de6893b2352311b5f332be60060cbd6387f88050f7ec345d"
+                    "url": "https://files.pythonhosted.org/packages/fa/fc/97711d2a502881d871e3cf2d2645e21e7f8e4d4fd9a56937557790cade6a/uncertainties-3.2.2-py3-none-any.whl",
+                    "sha256": "fd8543355952f4052786ed4150acaf12e23117bd0f5bd03ea07de466bce646e7"
                 }
             ]
         },
