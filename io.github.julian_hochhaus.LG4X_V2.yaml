@@ -53,8 +53,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/pybind/pybind11
-        tag: v2.13.1
-        commit: 941f45bcb51457884fa1afd6e24a67377d70f75c
+        tag: v2.13.2
+        commit: 07f30430d4186c2712761f1ffaea50ede63f2b2b
         x-checker-data:
           type: git
           tag-pattern: ^v?([\d.]+)$
