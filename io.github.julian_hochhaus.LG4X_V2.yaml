@@ -114,8 +114,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Julian-Hochhaus/LG4X-V2
-        commit: 91d8dbbf43756d9fa799e6759097e1c7aeae55ec
-        tag: 2.1.5
+        commit: 823722053b9892983957f640ee22180052633da7
+        tag: 2.2.0
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
