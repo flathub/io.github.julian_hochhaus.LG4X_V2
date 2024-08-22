@@ -53,8 +53,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/pybind/pybind11
-        tag: v2.13.4
-        commit: c6239a8a1b6871cc0fb5f7af885a02ffd1349f9d
+        tag: v2.13.5
+        commit: 7c33cdc2d39c7b99a122579f53bc94c8eb3332ff
         x-checker-data:
           type: git
           tag-pattern: ^v?([\d.]+)$
@@ -114,8 +114,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/Julian-Hochhaus/LG4X-V2
-        commit: 91d8dbbf43756d9fa799e6759097e1c7aeae55ec
-        tag: 2.1.5
+        commit: 3d1f3a6f8c61808a398a970d7ec5221737bb8e7e
+        tag: 2.2.1
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
