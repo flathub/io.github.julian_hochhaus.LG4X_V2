@@ -73,8 +73,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/84/fb/1a249de406daf2b4ebd2d714b739e8519034617daec085e3833c1a3ed57c/pybind11-2.13.1-py3-none-any.whl",
-                    "sha256": "97881536abe0cd4260a9ccc5bf6d1cf3113318f08af1feb82d4b9f95e93f0aa4"
+                    "url": "https://files.pythonhosted.org/packages/04/e8/a22d08220cb5e230007d9b0c11e429c3b19d01315d1a99dbd45e3bf97386/pybind11-2.13.5-py3-none-any.whl",
+                    "sha256": "dc35a98b61a0d23ee8599b317664f5be7e259fdc369a3b810b1ebbc3f5674d27"
                 }
             ]
         },
@@ -154,8 +154,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/1c/8a/0db635b225d2aa2984e405dc14bd2b0c324a0c312ea1bc9d283f2b83b038/numpy-2.0.1.tar.gz",
-                    "sha256": "485b87235796410c3519a699cfe1faab097e509e90ebb05dcd098db2ae87e7b3"
+                    "url": "https://files.pythonhosted.org/packages/54/a4/f8188c4f3e07f7737683588210c073478abcb542048cf4ab6fedad0b458a/numpy-2.1.0.tar.gz",
+                    "sha256": "7dc90da0081f7e1da49ec4e398ede6a8e9cc4f5ebe5f9e06b443ed889ee9aaa2"
                 },
                 {
                     "type": "file",
