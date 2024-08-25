@@ -31,8 +31,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/1c/8a/0db635b225d2aa2984e405dc14bd2b0c324a0c312ea1bc9d283f2b83b038/numpy-2.0.1.tar.gz",
-                    "sha256": "485b87235796410c3519a699cfe1faab097e509e90ebb05dcd098db2ae87e7b3"
+                    "url": "https://files.pythonhosted.org/packages/54/a4/f8188c4f3e07f7737683588210c073478abcb542048cf4ab6fedad0b458a/numpy-2.1.0.tar.gz",
+                    "sha256": "7dc90da0081f7e1da49ec4e398ede6a8e9cc4f5ebe5f9e06b443ed889ee9aaa2"
                 }
             ]
         },
@@ -129,8 +129,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fe/f3/444d97e43a6df0c9203d7bbbe9bbbf33fae0c36e004c43487f71e2b3a596/asteval-1.0.1-py3-none-any.whl",
-                    "sha256": "c7992cc6d0487ab29700b4531d9e7870e4b2e16cf94603cd5b71b21503fb0cde"
+                    "url": "https://files.pythonhosted.org/packages/92/d4/8992844e41917a83629e93eb282cf65cb51afe74467b0e5501b084bb71ee/asteval-1.0.2-py3-none-any.whl",
+                    "sha256": "2ece3179809185598d054289e089b8e7706c1a5afa5f7e7c236b3cdae0cf8290"
                 }
             ]
         },
@@ -171,13 +171,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/1c/8a/0db635b225d2aa2984e405dc14bd2b0c324a0c312ea1bc9d283f2b83b038/numpy-2.0.1.tar.gz",
-                    "sha256": "485b87235796410c3519a699cfe1faab097e509e90ebb05dcd098db2ae87e7b3"
+                    "url": "https://files.pythonhosted.org/packages/54/a4/f8188c4f3e07f7737683588210c073478abcb542048cf4ab6fedad0b458a/numpy-2.1.0.tar.gz",
+                    "sha256": "7dc90da0081f7e1da49ec4e398ede6a8e9cc4f5ebe5f9e06b443ed889ee9aaa2"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4e/e5/0230da034a2e1b1feb32621d7cd57c59484091d6dccc9e6b855b0d309fc9/scipy-1.14.0.tar.gz",
-                    "sha256": "b5923f48cb840380f9854339176ef21763118a7300a88203ccd0bdd26e58527b"
+                    "url": "https://files.pythonhosted.org/packages/62/11/4d44a1f274e002784e4dbdb81e0ea96d2de2d1045b2132d5af62cc31fd28/scipy-1.14.1.tar.gz",
+                    "sha256": "5a275584e726026a5699459aa72f828a610821006228e841b94275c4a7c08417"
                 }
             ]
         },
@@ -190,8 +190,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/1c/8a/0db635b225d2aa2984e405dc14bd2b0c324a0c312ea1bc9d283f2b83b038/numpy-2.0.1.tar.gz",
-                    "sha256": "485b87235796410c3519a699cfe1faab097e509e90ebb05dcd098db2ae87e7b3"
+                    "url": "https://files.pythonhosted.org/packages/54/a4/f8188c4f3e07f7737683588210c073478abcb542048cf4ab6fedad0b458a/numpy-2.1.0.tar.gz",
+                    "sha256": "7dc90da0081f7e1da49ec4e398ede6a8e9cc4f5ebe5f9e06b443ed889ee9aaa2"
                 },
                 {
                     "type": "file",
@@ -224,8 +224,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/fe/f3/444d97e43a6df0c9203d7bbbe9bbbf33fae0c36e004c43487f71e2b3a596/asteval-1.0.1-py3-none-any.whl",
-                    "sha256": "c7992cc6d0487ab29700b4531d9e7870e4b2e16cf94603cd5b71b21503fb0cde"
+                    "url": "https://files.pythonhosted.org/packages/92/d4/8992844e41917a83629e93eb282cf65cb51afe74467b0e5501b084bb71ee/asteval-1.0.2-py3-none-any.whl",
+                    "sha256": "2ece3179809185598d054289e089b8e7706c1a5afa5f7e7c236b3cdae0cf8290"
                 },
                 {
                     "type": "file",
@@ -239,13 +239,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/1c/8a/0db635b225d2aa2984e405dc14bd2b0c324a0c312ea1bc9d283f2b83b038/numpy-2.0.1.tar.gz",
-                    "sha256": "485b87235796410c3519a699cfe1faab097e509e90ebb05dcd098db2ae87e7b3"
+                    "url": "https://files.pythonhosted.org/packages/54/a4/f8188c4f3e07f7737683588210c073478abcb542048cf4ab6fedad0b458a/numpy-2.1.0.tar.gz",
+                    "sha256": "7dc90da0081f7e1da49ec4e398ede6a8e9cc4f5ebe5f9e06b443ed889ee9aaa2"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4e/e5/0230da034a2e1b1feb32621d7cd57c59484091d6dccc9e6b855b0d309fc9/scipy-1.14.0.tar.gz",
-                    "sha256": "b5923f48cb840380f9854339176ef21763118a7300a88203ccd0bdd26e58527b"
+                    "url": "https://files.pythonhosted.org/packages/62/11/4d44a1f274e002784e4dbdb81e0ea96d2de2d1045b2132d5af62cc31fd28/scipy-1.14.1.tar.gz",
+                    "sha256": "5a275584e726026a5699459aa72f828a610821006228e841b94275c4a7c08417"
                 },
                 {
                     "type": "file",
@@ -263,8 +263,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/03/79/4ac42d08e11688072e30872cd3b38b1faaf0cbda2103c4823cd753920f51/lmfitxps-1.3.0-py3-none-any.whl",
-                    "sha256": "f403cd991c430a355575e7ba86aa39c123240adc591d16af6e2f6ed10894a3f3"
+                    "url": "https://files.pythonhosted.org/packages/f8/ab/9235373a0f9e648e49f92ad1c0ebd296d710ad23653f1a73048493f9a617/lmfitxps-2.4.1-py3-none-any.whl",
+                    "sha256": "12e7e0b3086af5915e8156377328438bbb960f599d18fc2bd6c60ca6b7bd32a2"
                 }
             ]
         }
