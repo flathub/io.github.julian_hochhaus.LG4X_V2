@@ -33,6 +33,23 @@ modules:
           project-id: 2540
           url-template: https://github.com/xianyi/OpenBLAS/archive/v$version.tar.gz
 
+  # - name: openblas # dependency for lmfit and numpy
+  #   buildsystem: cmake-ninja
+  #   builddir: true
+  #   config-opts:
+  #     - -DBUILD_TESTING:BOOL=OFF
+  #     - -DBUILD_BENCHMARKS:BOOL=OFF
+  #     - -DDYNAMIC_ARCH:BOOL=ON
+  #     - -DBUILD_RELAPACK:BOOL=OFF
+  #   sources:
+  #     - type: archive
+  #       url: https://github.com/OpenMathLib/OpenBLAS/releases/download/v0.3.28/OpenBLAS-0.3.28.tar.gz
+  #       sha256: f1003466ad074e9b0c8d421a204121100b0751c96fc6fcf3d1456bd12f8a00a1
+  #       x-checker-data:
+  #         type: anitya
+  #         project-id: 2540
+  #         url-template: https://github.com/OpenMathLib/OpenBLAS/releases/download/v$version/OpenBLAS-$version.tar.gz
+
   - name: Cython
     buildsystem: simple
     build-commands:
@@ -108,7 +125,7 @@ modules:
     build-commands:
       - install -Dm744 Python/* /app/bin
       - cp -r Databases /app
-      - install config/config.ini /app #Install this config file because it is needed for lg4x to start
+      - install config/config.ini /app/config #Install this config file because it is needed for lg4x to start
       - install -Dm644 data/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 data/logo/logo.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dm644 data/${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
