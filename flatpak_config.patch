@@ -1,31 +1,17 @@
-Binary files a/.git/index and b/.git/index differ
 diff -ruN a/Python/main.py b/Python/main.py
---- a/Python/main.py	2024-08-25 16:09:22.822555065 +0200
-+++ b/Python/main.py	2024-08-25 16:05:27.398101091 +0200
-@@ -35,11 +35,13 @@
-     log_folder = os.path.join(user_home_folder,'.var/app/io.github.julian_hochhaus.LG4X_V2/cache/Logs')
+--- a/Python/main.py	2024-08-26 17:33:56.168008547 +0200
++++ b/Python/main.py	2024-08-26 17:41:59.696495056 +0200
+@@ -31,10 +31,10 @@
+ import configparser
+ 
+ if os.environ.get('container') == 'flatpak':
+-    user_home_folder = os.path.expanduser('~')
+-    log_folder = os.path.join(user_home_folder,'.var/app/io.github.julian_hochhaus.LG4X_V2/cache/Logs')
++    log_folder = ('/app/cache/Logs')
      os.makedirs(log_folder, exist_ok=True)
-     log_file_path = os.path.join(user_home_folder, '.var/app/io.github.julian_hochhaus.LG4X_V2/cache/Logs/app.log')
-+    config_file_path = (user_home_folder, '.var/app/io.github.julian_hochhaus.LG4X_V2/config/config.ini')
+-    log_file_path = os.path.join(user_home_folder, '.var/app/io.github.julian_hochhaus.LG4X_V2/cache/Logs/app.log')
++    log_file_path = ('/app/cache/Logs/app.log')
++    config_file_path = ('/app/config/config.ini')
  else:
      script_directory = os.path.dirname(os.path.abspath(__file__))
      log_folder = os.path.join(script_directory, '../Logs')
-     os.makedirs(log_folder, exist_ok=True)
-     log_file_path = os.path.join(script_directory, '../Logs/app.log')
-+    config_file_path = os.path.join(script_directory, '../config/config.ini')
-     
- max_log_size = 4*1024*1024 # 4MB
- backup_count = 5  # Number of backup files to keep
-@@ -51,7 +53,7 @@
- logger.addHandler(handler)
- 
- config = configparser.ConfigParser()
--config_file_path = os.path.join(script_directory, '../config/config.ini')
-+
- if len(config_file_path)>=256:
-     print('Error: config file path too long (more than 256 characters). Please move the install directory of the project to a shorter path. Otherwise, configparser cannot read the config file and the program does not work.')
- config.read(config_file_path)
-Binary files a/Python/__pycache__/helpers.cpython-311.pyc and b/Python/__pycache__/helpers.cpython-311.pyc differ
-Binary files a/Python/__pycache__/periodictable.cpython-311.pyc and b/Python/__pycache__/periodictable.cpython-311.pyc differ
-Binary files a/Python/__pycache__/vamas.cpython-311.pyc and b/Python/__pycache__/vamas.cpython-311.pyc differ
-Binary files a/Python/__pycache__/vamas_export.cpython-311.pyc and b/Python/__pycache__/vamas_export.cpython-311.pyc differ
