@@ -108,6 +108,7 @@ modules:
     build-commands:
       - install -Dm744 Python/* /app/bin
       - cp -r Databases /app
+      - install -Dm744 config/config.ini /app/config/config.ini #Install this config file because it is needed for lg4x to start
       - install -Dm644 data/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
       - install -Dm644 data/logo/logo.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dm644 data/${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
@@ -121,7 +122,7 @@ modules:
           tag-pattern: ^([\d.]+)$
       - type: patch
         path: metainfo_release_date.patch
-      # - type: patch
-      #   path: flatpak_log.patch
+      - type: patch
+        path: flatpak_config.patch
 
 
