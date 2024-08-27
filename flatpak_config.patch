@@ -1,7 +1,7 @@
 diff -ruN a/Python/main.py b/Python/main.py
 --- a/Python/main.py	2024-08-26 17:33:56.168008547 +0200
-+++ b/Python/main.py	2024-08-26 17:46:58.718922376 +0200
-@@ -31,10 +31,10 @@
++++ b/Python/main.py	2024-08-27 12:11:25.766196966 +0200
+@@ -31,15 +31,16 @@
  import configparser
  
  if os.environ.get('container') == 'flatpak':
@@ -15,3 +15,17 @@ diff -ruN a/Python/main.py b/Python/main.py
  else:
      script_directory = os.path.dirname(os.path.abspath(__file__))
      log_folder = os.path.join(script_directory, '../Logs')
+     os.makedirs(log_folder, exist_ok=True)
+     log_file_path = os.path.join(script_directory, '../Logs/app.log')
++    config_file_path = os.path.join(script_directory, '../config/config.ini')
+     
+ max_log_size = 4*1024*1024 # 4MB
+ backup_count = 5  # Number of backup files to keep
+@@ -51,7 +52,6 @@
+ logger.addHandler(handler)
+ 
+ config = configparser.ConfigParser()
+-config_file_path = os.path.join(script_directory, '../config/config.ini')
+ if len(config_file_path)>=256:
+     print('Error: config file path too long (more than 256 characters). Please move the install directory of the project to a shorter path. Otherwise, configparser cannot read the config file and the program does not work.')
+ config.read(config_file_path)
