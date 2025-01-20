@@ -122,7 +122,5 @@ modules:
           tag-pattern: ^([\d.]+)$
       - type: patch
         path: metainfo_release_date.patch
-      - type: patch
-        path: flatpak_config.patch
 
 
