@@ -26,13 +26,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8d/9e/e4786569b319847ffd98a8326802d5cf8a5500860dbfc2df1f0f4883ed99/contourpy-1.2.1.tar.gz",
-                    "sha256": "4d8908b3bee1c889e547867ca4cdc54e5ab6be6d3e078556814a22457f49423c"
+                    "url": "https://files.pythonhosted.org/packages/25/c2/fc7193cc5383637ff390a712e88e4ded0452c9fbcf84abe3de5ea3df1866/contourpy-1.3.1.tar.gz",
+                    "sha256": "dfd97abd83335045a913e3bcc4a09c0ceadbe66580cf573fe961f4a825efa699"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/54/a4/f8188c4f3e07f7737683588210c073478abcb542048cf4ab6fedad0b458a/numpy-2.1.0.tar.gz",
-                    "sha256": "7dc90da0081f7e1da49ec4e398ede6a8e9cc4f5ebe5f9e06b443ed889ee9aaa2"
+                    "url": "https://files.pythonhosted.org/packages/ec/d0/c12ddfd3a02274be06ffc71f3efc6d0e457b0409c4481596881e748cb264/numpy-2.2.2.tar.gz",
+                    "sha256": "ed6906f61834d687738d25988ae117683705636936cc605be0bb208b23df4d8f"
                 }
             ]
         },
@@ -59,8 +59,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c6/cb/cd80a0da995adde8ade6044a8744aee0da5efea01301cadf770f7fbe7dcc/fonttools-4.53.1.tar.gz",
-                    "sha256": "e128778a8e9bc11159ce5447f76766cefbd876f44bd79aff030287254e4752c4"
+                    "url": "https://files.pythonhosted.org/packages/76/61/a300d1574dc381393424047c0396a0e213db212e28361123af9830d71a8d/fonttools-4.55.3.tar.gz",
+                    "sha256": "3983313c2a04d6cc1fe9251f8fc647754cf49a61dac6cb1e7249ae67afaafc45"
                 }
             ]
         },
@@ -73,8 +73,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/31/5e/b8faf2b2aeb679c0f4359fd1a4716fe90d65f72f72639413ffb95f3c3b46/cppy-1.2.1-py3-none-any.whl",
-                    "sha256": "c5b5eac3d3f42593a07d35275b0bc27f447b76b9ad8f27c62e3cfa286dc1988a"
+                    "url": "https://files.pythonhosted.org/packages/78/0c/deb4c3e24515d240428260457d2e2e23341fccc3125bdc170190eeba7824/cppy-1.3.0-py3-none-any.whl",
+                    "sha256": "dd4bcae2076fda7a04d8b4a1ef0f81a0d983c7459db3c13c1706d9f037cb1ed3"
                 }
             ]
         },
@@ -87,8 +87,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b9/2d/226779e405724344fc678fcc025b812587617ea1a48b9442628b688e85ea/kiwisolver-1.4.5.tar.gz",
-                    "sha256": "e57e563a57fb22a142da34f38acc2fc1a5c864bc29ca1517a88abc963e60d6ec"
+                    "url": "https://files.pythonhosted.org/packages/82/59/7c91426a8ac292e1cdd53a63b6d9439abd573c875c3f92c146767dd33faf/kiwisolver-1.4.8.tar.gz",
+                    "sha256": "23d5f023bdc8c7e54eb65f03ca5d5bb25b601eac4d7f1a042888a1f45237987e"
                 }
             ]
         },
@@ -101,8 +101,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/cd/74/ad3d526f3bf7b6d3f408b73fde271ec69dfac8b81341a318ce825f2b3812/pillow-10.4.0.tar.gz",
-                    "sha256": "166c1cd4d24309b30d61f79f4a9114b7b2313d7450912277855ff5dfd7cd4a06"
+                    "url": "https://files.pythonhosted.org/packages/f3/af/c097e544e7bd278333db77933e535098c259609c4eb3b85381109602fb5b/pillow-11.1.0.tar.gz",
+                    "sha256": "368da70808b36d73b4b390a8ffac11069f8a5c85f29eff1f1b01bcf3ef5b2a20"
                 }
             ]
         },
@@ -115,8 +115,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9d/ea/6d76df31432a0e6fdf81681a895f009a4bb47b3c39036db3e1b528191d52/pyparsing-3.1.2-py3-none-any.whl",
-                    "sha256": "f9db75911801ed778fe61bb643079ff86601aca99fcae6345aa67292038fb742"
+                    "url": "https://files.pythonhosted.org/packages/1c/a7/c8a2d361bf89c0d9577c934ebb7421b25dc84bf3a8e3ac0a40aed9acc547/pyparsing-3.2.1-py3-none-any.whl",
+                    "sha256": "506ff4f4386c4cec0590ec19e6302d3aedb992fdc02c761e90416f158dacf8e1"
                 }
             ]
         },
@@ -129,8 +129,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/92/d4/8992844e41917a83629e93eb282cf65cb51afe74467b0e5501b084bb71ee/asteval-1.0.2-py3-none-any.whl",
-                    "sha256": "2ece3179809185598d054289e089b8e7706c1a5afa5f7e7c236b3cdae0cf8290"
+                    "url": "https://files.pythonhosted.org/packages/13/ac/19dbba27e891f39feb4170b884da449ee2699ef4ebb88eefeda364bbbbcf/asteval-1.0.6-py3-none-any.whl",
+                    "sha256": "5e119ed306e39199fd99c881cea0e306b3f3807f050c9be79829fe274c6378dc"
                 }
             ]
         },
@@ -171,13 +171,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/54/a4/f8188c4f3e07f7737683588210c073478abcb542048cf4ab6fedad0b458a/numpy-2.1.0.tar.gz",
-                    "sha256": "7dc90da0081f7e1da49ec4e398ede6a8e9cc4f5ebe5f9e06b443ed889ee9aaa2"
+                    "url": "https://files.pythonhosted.org/packages/ec/d0/c12ddfd3a02274be06ffc71f3efc6d0e457b0409c4481596881e748cb264/numpy-2.2.2.tar.gz",
+                    "sha256": "ed6906f61834d687738d25988ae117683705636936cc605be0bb208b23df4d8f"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/62/11/4d44a1f274e002784e4dbdb81e0ea96d2de2d1045b2132d5af62cc31fd28/scipy-1.14.1.tar.gz",
-                    "sha256": "5a275584e726026a5699459aa72f828a610821006228e841b94275c4a7c08417"
+                    "url": "https://files.pythonhosted.org/packages/76/c6/8eb0654ba0c7d0bb1bf67bf8fbace101a8e4f250f7722371105e8b6f68fc/scipy-1.15.1.tar.gz",
+                    "sha256": "033a75ddad1463970c96a88063a1df87ccfddd526437136b6ee81ff0312ebdf6"
                 }
             ]
         },
@@ -190,13 +190,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/54/a4/f8188c4f3e07f7737683588210c073478abcb542048cf4ab6fedad0b458a/numpy-2.1.0.tar.gz",
-                    "sha256": "7dc90da0081f7e1da49ec4e398ede6a8e9cc4f5ebe5f9e06b443ed889ee9aaa2"
+                    "url": "https://files.pythonhosted.org/packages/ec/d0/c12ddfd3a02274be06ffc71f3efc6d0e457b0409c4481596881e748cb264/numpy-2.2.2.tar.gz",
+                    "sha256": "ed6906f61834d687738d25988ae117683705636936cc605be0bb208b23df4d8f"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/88/d9/ecf715f34c73ccb1d8ceb82fc01cd1028a65a5f6dbc57bfa6ea155119058/pandas-2.2.2.tar.gz",
-                    "sha256": "9e79019aba43cb4fda9e4d983f8e88ca0373adbb697ae9c6c43093218de28b54"
+                    "url": "https://files.pythonhosted.org/packages/9c/d6/9f8431bacc2e19dca897724cd097b1bb224a6ad5433784a44b587c7c13af/pandas-2.2.3.tar.gz",
+                    "sha256": "4f18ba62b61d7e192368b84517265a99b4d7ee8912f8708660fb4a366cc82667"
                 },
                 {
                     "type": "file",
@@ -205,13 +205,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9c/3d/a121f284241f08268b21359bd425f7d4825cffc5ac5cd0e1b3d82ffd2b10/pytz-2024.1-py2.py3-none-any.whl",
-                    "sha256": "328171f4e3623139da4983451950b28e95ac706e13f3f2630a879749e7a8b319"
+                    "url": "https://files.pythonhosted.org/packages/11/c3/005fcca25ce078d2cc29fd559379817424e94885510568bc1bc53d7d5846/pytz-2024.2-py2.py3-none-any.whl",
+                    "sha256": "31c7c1817eb7fae7ca4b8c7ee50c72f93aa2dd863de768e1ef4245d426aa0725"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/65/58/f9c9e6be752e9fcb8b6a0ee9fb87e6e7a1f6bcab2cdc73f02bb7ba91ada0/tzdata-2024.1-py2.py3-none-any.whl",
-                    "sha256": "9068bc196136463f5245e51efda838afa15aaeca9903f49050dfa2679db4d252"
+                    "url": "https://files.pythonhosted.org/packages/a6/ab/7e5f53c3b9d14972843a647d8d7a853969a58aecc7559cb3267302c94774/tzdata-2024.2-py2.py3-none-any.whl",
+                    "sha256": "a48093786cdcde33cad18c2555e8532f34422074448fbc874186f0abd79565cd"
                 }
             ]
         },
@@ -224,13 +224,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/92/d4/8992844e41917a83629e93eb282cf65cb51afe74467b0e5501b084bb71ee/asteval-1.0.2-py3-none-any.whl",
-                    "sha256": "2ece3179809185598d054289e089b8e7706c1a5afa5f7e7c236b3cdae0cf8290"
+                    "url": "https://files.pythonhosted.org/packages/13/ac/19dbba27e891f39feb4170b884da449ee2699ef4ebb88eefeda364bbbbcf/asteval-1.0.6-py3-none-any.whl",
+                    "sha256": "5e119ed306e39199fd99c881cea0e306b3f3807f050c9be79829fe274c6378dc"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c9/7a/cef76fd8438a42f96db64ddaa85280485a9c395e7df3db8158cfec1eee34/dill-0.3.8-py3-none-any.whl",
-                    "sha256": "c36ca9ffb54365bdd2f8eb3eff7d2a21237f8452b57ace88b1ac615b7e815bd7"
+                    "url": "https://files.pythonhosted.org/packages/46/d1/e73b6ad76f0b1fb7f23c35c6d95dbc506a9c8804f43dda8cb5b0fa6331fd/dill-0.3.9-py3-none-any.whl",
+                    "sha256": "468dff3b89520b474c0397703366b7b95eebe6303f108adf9b19da1f702be87a"
                 },
                 {
                     "type": "file",
@@ -239,13 +239,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/54/a4/f8188c4f3e07f7737683588210c073478abcb542048cf4ab6fedad0b458a/numpy-2.1.0.tar.gz",
-                    "sha256": "7dc90da0081f7e1da49ec4e398ede6a8e9cc4f5ebe5f9e06b443ed889ee9aaa2"
+                    "url": "https://files.pythonhosted.org/packages/ec/d0/c12ddfd3a02274be06ffc71f3efc6d0e457b0409c4481596881e748cb264/numpy-2.2.2.tar.gz",
+                    "sha256": "ed6906f61834d687738d25988ae117683705636936cc605be0bb208b23df4d8f"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/62/11/4d44a1f274e002784e4dbdb81e0ea96d2de2d1045b2132d5af62cc31fd28/scipy-1.14.1.tar.gz",
-                    "sha256": "5a275584e726026a5699459aa72f828a610821006228e841b94275c4a7c08417"
+                    "url": "https://files.pythonhosted.org/packages/76/c6/8eb0654ba0c7d0bb1bf67bf8fbace101a8e4f250f7722371105e8b6f68fc/scipy-1.15.1.tar.gz",
+                    "sha256": "033a75ddad1463970c96a88063a1df87ccfddd526437136b6ee81ff0312ebdf6"
                 },
                 {
                     "type": "file",
@@ -263,8 +263,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f8/ab/9235373a0f9e648e49f92ad1c0ebd296d710ad23653f1a73048493f9a617/lmfitxps-2.4.1-py3-none-any.whl",
-                    "sha256": "12e7e0b3086af5915e8156377328438bbb960f599d18fc2bd6c60ca6b7bd32a2"
+                    "url": "https://files.pythonhosted.org/packages/3a/d7/f2c3a2ee5c9be9bc6a24637daecd957fe1f81d91cc893e27139dcb6d3df6/lmfitxps-4.0.9-py3-none-any.whl",
+                    "sha256": "c1093c9884d1c8ab199d1652154aed0e1e41d008e93a05a90699dc3aed0f41a9"
                 }
             ]
         }

@@ -2,8 +2,8 @@ app-id: io.github.julian_hochhaus.LG4X_V2
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
 base: com.riverbankcomputing.PyQt.BaseApp
-base-version: 5.15-23.08
-runtime-version: 5.15-23.08
+base-version: 5.15-24.08
+runtime-version: 5.15-24.08
 command: main.py
 finish-args:
   - --share=ipc
@@ -115,14 +115,12 @@ modules:
     sources:
       - type: git
         url: https://github.com/Julian-Hochhaus/LG4X-V2
-        commit: 3d1f3a6f8c61808a398a970d7ec5221737bb8e7e
-        tag: 2.2.1
+        commit: 14f35551735231321906b5a9db0427e92417182f
+        tag: 2.3.0
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
       - type: patch
         path: metainfo_release_date.patch
-      - type: patch
-        path: flatpak_config.patch
 
 
