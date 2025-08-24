@@ -1,0 +1,12 @@
+diff -ruN a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	2022-12-25 09:30:03.491215200 +0100
++++ b/pyproject.toml	2025-08-24 19:43:20.636957173 +0200
+@@ -28,7 +28,7 @@
+ ]
+ 
+ [tool.poetry.dependencies]
+-python = ">=3.7,<3.12"
++python = ">=3.7"
+ darkdetect = "^0.7.1"
+ 
+ [tool.poetry.group.dev.dependencies]
