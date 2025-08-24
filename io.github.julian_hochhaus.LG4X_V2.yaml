@@ -78,7 +78,6 @@ modules:
         #   type: pypi
         #   name: numpy
 
-
   - dependencies.json
   - pyqtdarktheme_deps.json
 
@@ -104,8 +103,6 @@ modules:
         x-checker-data:
           type: pypi
           name: matplotlib
-
-
 
   - name: python-qtdarktheme
     buildsystem: simple
