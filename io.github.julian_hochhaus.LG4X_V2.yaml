@@ -53,14 +53,14 @@ modules:
     sources:
       - type: git
         url: https://github.com/pybind/pybind11
-        tag: v3.0.0
-        commit: ed5057ded698e305210269dafa57574ecf964483
+        tag: v3.0.1
+        commit: f5fbe867d2d26e4a0a9177a51f6e568868ad3dc8
         x-checker-data:
           type: git
           tag-pattern: ^v?([\d.]+)$
 
     # Update modules
-    # python3 flatpak-pip-generator tomli packaging pyproject_metadata exceptiongroup pybind11 setuptools_scm_git_archive setuptools_scm setuptools meson-python pythran --ignore-installed numpy,scipy -o numpy_deps && python3 flatpak-pip-generator versioneer contourpy cycler fonttools cppy kiwisolver pillow pyparsing asteval uncertainties python-dateutil scipy pandas lmfit lmfitxps --ignore-installed numpy -o dependencies && flatpak-builder build --force-clean --install --user io.github.julian_hochhaus.LG4X_V2.yaml
+    # python3 flatpak-pip-generator tomli packaging pyproject_metadata exceptiongroup pybind11 setuptools_scm_git_archive setuptools_scm setuptools meson-python pythran --ignore-installed numpy,scipy -o numpy_deps && python3 flatpak-pip-generator versioneer contourpy cycler fonttools cppy kiwisolver pillow pyparsing asteval uncertainties python-dateutil scipy pandas lmfit lmfitxps semantic-version poetry-core --ignore-installed numpy -o dependencies && req2flatpak --requirements darkdetect==0.7.1 maturin==1.9.3 setuptools-rust==1.11.1 --target-platforms 312-x86_64 312-aarch64 --outfile pyqtdarktheme_deps.json && flatpak-builder build --force-clean --install --user io.github.julian_hochhaus.LG4X_V2.yaml
   - numpy_deps.json
 
   - name: python-numpy
@@ -78,7 +78,9 @@ modules:
         #   type: pypi
         #   name: numpy
 
+
   - dependencies.json
+  - pyqtdarktheme_deps.json
 
   - name: python3-matplotlib
     buildsystem: simple
@@ -102,6 +104,23 @@ modules:
         x-checker-data:
           type: pypi
           name: matplotlib
+
+
+
+  - name: python-qtdarktheme
+    buildsystem: simple
+    build-commands:
+      - pip3 install --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
+        --no-build-isolation .
+    sources:
+      - type: archive
+        url: https://files.pythonhosted.org/packages/5c/f1/786feaad7a333072b34a913dbe38aef94b5ae43ad188934f5d70007aea79/pyqtdarktheme-2.1.0.tar.gz
+        sha256: 5f8274ddfa3a5481ed9743cdb0f9debfeb7ff695b3a0d202a8104361d17dadb8
+      - type: patch
+        path: qdarktheme_python_ver.patch
+        x-checker-data:
+          type: pypi
+          name: pyqtdarktheme
 
   - name: LG4X-V2
     buildsystem: simple
