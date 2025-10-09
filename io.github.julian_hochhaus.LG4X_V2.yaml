@@ -98,8 +98,8 @@ modules:
         url: https://github.com/qhull/qhull/archive/v8.0.2/qhull-8.0.2.tar.gz
         sha256: 8774e9a12c70b0180b95d6b0b563c5aa4bea8d5960c15e18ae3b6d2521d64f8b
       - type: archive
-        url: https://files.pythonhosted.org/packages/a0/59/c3e6453a9676ffba145309a73c462bb407f4400de7de3f2b41af70720a3c/matplotlib-3.10.6.tar.gz
-        sha256: ec01b645840dd1996df21ee37f208cd8ba57644779fa20464010638013d3203c
+        url: https://files.pythonhosted.org/packages/ae/e2/d2d5295be2f44c678ebaf3544ba32d20c1f9ef08c49fe47f496180e1db15/matplotlib-3.10.7.tar.gz
+        sha256: a06ba7e2a2ef9131c79c49e63dad355d2d878413a0376c1727c8b9335ff731c7
         x-checker-data:
           type: pypi
           name: matplotlib
