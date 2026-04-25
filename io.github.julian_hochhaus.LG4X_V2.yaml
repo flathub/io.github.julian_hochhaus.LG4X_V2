@@ -34,8 +34,8 @@ modules:
       - /share/man
     sources:
       - type: archive
-        url: https://github.com/OpenMathLib/OpenBLAS/archive/v0.3.32.tar.gz
-        sha512: 5aac0c41a78bca872439bcde67445dd12de27d9efd0d9db51e6e3a31dfa2d0f6a6c5ee1c1de2bf7ad2f89082259e67f27ddaeafb0553bb5f2ca9a90c8a3dde29
+        url: https://github.com/OpenMathLib/OpenBLAS/archive/v0.3.33.tar.gz
+        sha512: 68fa2b90a93a2dfd84dfa586af07d90952fd4f2ad8dfe26061be250e80fec8f1a76ad78977f217c7dbdd26291249f1ac38a07f08ef323eee7a248c4cb67cd670
         x-checker-data:
           type: anitya
           project-id: 2540
@@ -106,8 +106,8 @@ modules:
         url: https://github.com/qhull/qhull/archive/v8.0.2/qhull-8.0.2.tar.gz
         sha256: 8774e9a12c70b0180b95d6b0b563c5aa4bea8d5960c15e18ae3b6d2521d64f8b
       - type: archive
-        url: https://files.pythonhosted.org/packages/8a/76/d3c6e3a13fe484ebe7718d14e269c9569c4eb0020a968a327acb3b9a8fe6/matplotlib-3.10.8.tar.gz
-        sha256: 2299372c19d56bcd35cf05a2738308758d32b9eaed2371898d8f5bd33f084aa3
+        url: https://files.pythonhosted.org/packages/63/1b/4be5be87d43d327a0cf4de1a56e86f7f84c89312452406cf122efe2839e6/matplotlib-3.10.9.tar.gz
+        sha256: fd66508e8c6877d98e586654b608a0456db8d7e8a546eb1e2600efd957302358
         x-checker-data:
           type: pypi
           name: matplotlib
