@@ -13,6 +13,11 @@ finish-args:
 cleanup:
   - /include
   - /share/man
+cleanup-commands:
+  - /app/cleanup-BaseApp.sh
+build-options:
+  env:
+    - BASEAPP_REMOVE_PYWEBENGINE=1
 modules:
   - name: openblas # dependency for lmfit and numpy
     no-autogen: true
