@@ -5,13 +5,13 @@ base: com.riverbankcomputing.PyQt.BaseApp
 base-version: 5.15-25.08
 runtime-version: 5.15-25.08
 command: main.py
+rename-icon: logo
 finish-args:
   - --share=ipc
   - --socket=wayland
   - --socket=fallback-x11
   - --device=dri
 cleanup:
-  - /include
   - /share/man
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
@@ -19,7 +19,10 @@ build-options:
   env:
     - BASEAPP_REMOVE_PYWEBENGINE=1
 modules:
+  - python3-requirements.yaml
+
   - name: openblas # dependency for lmfit and numpy
+    disabled: true
     no-autogen: true
     make-args:
       - DYNAMIC_ARCH=1
@@ -31,12 +34,6 @@ modules:
       - PREFIX=/app
     cleanup:
       - /bin
-      - /include
-      - /lib/cmake
-      - /lib/*.a
-      - /lib/*.la
-      - /lib/pkgconfig
-      - /share/man
     sources:
       - type: archive
         url: https://github.com/OpenMathLib/OpenBLAS/archive/v0.3.33.tar.gz
@@ -46,108 +43,24 @@ modules:
           project-id: 2540
           url-template: https://github.com/OpenMathLib/OpenBLAS/archive/v$version.tar.gz
 
-  - name: Cython
-    buildsystem: simple
-    build-commands:
-      - pip3 install --no-index --ignore-installed --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
-        --no-build-isolation .
-    sources:
-      - type: archive
-        url: https://files.pythonhosted.org/packages/3f/3b/ebd94c8b85f8e41b5015a9ed94ee3df866024d480d05cd08b774684fb81d/cython-3.2.5.tar.gz
-        sha256: 3dd42e4cf36ad15f265bdfec2337cc00c688c8eb6d374ffd13bb19437c27bba1
-
-  - name: pybind11
-    buildsystem: cmake-ninja
-    builddir: true
-    config-opts:
-      - -DPYBIND11_INSTALL:BOOL=ON
-      - -DPYBIND11_TEST:BOOL=OFF
-      - -DPYTHON_INCLUDE_DIRS=/usr/include/python3.13
-    sources:
-      - type: git
-        url: https://github.com/pybind/pybind11
-        tag: v3.0.4
-        commit: d03662f0984f652b60e7ddce53d3868002275197
-        x-checker-data:
-          type: git
-          tag-pattern: ^v?([\d.]+)$
-
-    # Update modules
-    # python3 flatpak-pip-generator tomli packaging pyproject_metadata exceptiongroup pybind11 setuptools_scm_git_archive setuptools_scm setuptools meson-python pythran --ignore-installed numpy,scipy -o numpy_deps && python3 flatpak-pip-generator versioneer contourpy cycler fonttools cppy kiwisolver pillow pyparsing asteval uncertainties python-dateutil scipy pandas lmfit lmfitxps semantic-version poetry-core --ignore-installed numpy -o dependencies && req2flatpak --requirements darkdetect==0.7.1 maturin==1.9.3 setuptools-rust==1.11.1 --target-platforms 312-x86_64 312-aarch64 --outfile pyqtdarktheme_deps.json && flatpak-builder build --force-clean --install --user io.github.julian_hochhaus.LG4X_V2.yaml
-  - numpy_deps.json
-
-  - name: python-numpy
-    buildsystem: simple
-    build-options:
-      ldflags: -lgfortran
-    build-commands:
-      - pip3 install --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
-        --no-build-isolation .
-    sources:
-      - type: archive
-        url: https://files.pythonhosted.org/packages/d0/ad/fed0499ce6a338d2a03ebae59cd15093910c8875328855781952abf6c2fe/numpy-2.4.6.tar.gz
-        sha256: f3a3570c4a2a16746ac2c31a7c7c7b0c186b95ce902e33db6f28094ed7387dda
-        # x-checker-data:
-        #   type: pypi
-        #   name: numpy
-
-  - dependencies.json
-  - pyqtdarktheme_deps.json
-
-  - name: python3-matplotlib
-    buildsystem: simple
-    build-commands:
-      - mkdir -p subprojects/packagecache/
-      - cp qhull-8.0.2.tgz freetype-2.6.1.tar.gz subprojects/packagecache/ #Copy qhull and freetype to correct dir so matplotlib will not try to download it
-      - python3 -mpip install . --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
-        --no-build-isolation
-    sources:
-      - type: file
-        url: https://download.savannah.gnu.org/releases/freetype/freetype-old/freetype-2.6.1.tar.gz
-        sha256: 0a3c7dfbda6da1e8fce29232e8e96d987ababbbf71ebc8c75659e4132c367014
-        dest-filename: freetype-2.6.1.tar.gz
-      - type: file
-        dest-filename: qhull-8.0.2.tgz
-        url: https://github.com/qhull/qhull/archive/v8.0.2/qhull-8.0.2.tar.gz
-        sha256: 8774e9a12c70b0180b95d6b0b563c5aa4bea8d5960c15e18ae3b6d2521d64f8b
-      - type: archive
-        url: https://files.pythonhosted.org/packages/63/1b/4be5be87d43d327a0cf4de1a56e86f7f84c89312452406cf122efe2839e6/matplotlib-3.10.9.tar.gz
-        sha256: fd66508e8c6877d98e586654b608a0456db8d7e8a546eb1e2600efd957302358
-        x-checker-data:
-          type: pypi
-          name: matplotlib
-
-  - name: python-qtdarktheme
-    buildsystem: simple
-    build-commands:
-      - pip3 install --no-index --find-links=file://${PWD} --prefix=${FLATPAK_DEST}
-        --no-build-isolation .
-    sources:
-      - type: archive
-        url: https://files.pythonhosted.org/packages/5c/f1/786feaad7a333072b34a913dbe38aef94b5ae43ad188934f5d70007aea79/pyqtdarktheme-2.1.0.tar.gz
-        sha256: 5f8274ddfa3a5481ed9743cdb0f9debfeb7ff695b3a0d202a8104361d17dadb8
-      - type: patch
-        path: qdarktheme_python_ver.patch
-        x-checker-data:
-          type: pypi
-          name: pyqtdarktheme
-
   - name: LG4X-V2
     buildsystem: simple
     build-commands:
       - install -Dm744 Python/* /app/bin
       - cp -r Databases /app
       - install -Dm744 config/config.ini /app/config/config.ini #Install this config file because it is needed for lg4x to start
-      - install -Dm644 data/${FLATPAK_ID}.metainfo.xml ${FLATPAK_DEST}/share/metainfo/${FLATPAK_ID}.metainfo.xml
-      - install -Dm644 data/logo/logo.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
-      - install -Dm644 data/${FLATPAK_ID}.desktop ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm644 data/${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo/
+      - install -Dm644 data/logo/logo.svg -t ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/
+      - install -Dm644 data/${FLATPAK_ID}.desktop -t ${FLATPAK_DEST}/share/applications/
     sources:
       - type: git
         url: https://github.com/Julian-Hochhaus/LG4X-V2
+        # The latest commit from repository
         commit: 69b788af5dc591a0239ad803f941c88b2e8eba62
-        x-checker-data:
-          type: git
-          tag-pattern: ^([\d.]+)$
+        # Disabled to prevent downgrade
+        # x-checker-data:
+        #   type: git
+        #   tag-pattern: ^([\d.]+)$
       - type: patch
         path: metainfo_release_date.patch
 
