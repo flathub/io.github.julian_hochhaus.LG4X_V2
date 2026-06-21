@@ -13,6 +13,7 @@ finish-args:
   - --device=dri
 cleanup:
   - /share/man
+  - '*.a'
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
 build-options:
@@ -22,7 +23,6 @@ modules:
   - python3-requirements.yaml
 
   - name: openblas # dependency for lmfit and numpy
-    disabled: true
     no-autogen: true
     make-args:
       - DYNAMIC_ARCH=1
