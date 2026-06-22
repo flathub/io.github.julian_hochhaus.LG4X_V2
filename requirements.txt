@@ -1,0 +1,10 @@
+asteval
+lmfit
+matplotlib
+numpy
+pandas
+scipy
+uncertainties
+lmfitxps
+configparser
+pyqtdarktheme2
